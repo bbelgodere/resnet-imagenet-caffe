@@ -13,5 +13,5 @@ max_iter: 1600000
 momentum: 0.9
 weight_decay: 0.0001
 snapshot: 100000
-snapshot_prefix: "/home/heyihui/ceph/resnet-imagenet-caffe/resnet_101/snapshot/resnet_101"
+snapshot_prefix: "/home/bmbelgod/resnet-imagenet-caffe/resnet_101/snapshot/resnet_101"
 solver_mode: GPU

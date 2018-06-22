@@ -15,7 +15,7 @@ layer {
     mean_value: 123.0
   }
   data_param {
-    source: "/home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_train_lmdb"
+    source: "/home/bmbelgod/imagenet/imagenet1K-LMDB/ilsvrc12_train_lmdb"
     batch_size: 8
     backend: LMDB
   }
@@ -34,7 +34,7 @@ layer {
     mean_value: 123.0
   }
   data_param {
-    source: "/home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_val_lmdb"
+    source: "/home/bmbelgod/imagenet/imagenet1K-LMDB/ilsvrc12_val_lmdb"
     batch_size: 8
     crop_size: 224
     backend: LMDB

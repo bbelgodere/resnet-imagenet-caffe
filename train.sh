@@ -1,6 +1,3 @@
-export PYTHONPATH="/home/heyihui-local/caffe/python"
-export PYTHONPATH="${PYTHONPATH}:/home/heyihui-local/resnet-cifar10-caffe"
-# ${PYTHONPATH}:
 set -x
 
 GPUs=$1
@@ -17,7 +14,7 @@ LOG=${NET}"/logs/${NET}_${EXTRA_ARGS_SLUG}_`date +'%Y-%m-%d_%H-%M-%S'`.log"
 exec &> >(tee -a "$LOG")
 echo Logging output to "$LOG"
 
-time /home/heyihui/heyihui-local/caffe/build/tools/caffe train -gpu ${GPUs} \
+time caffe train -gpu ${GPUs} \
     -solver ${solver} \
     -sighup_effect stop ${w} ${p}
 #    ${EXTRA_ARGS}

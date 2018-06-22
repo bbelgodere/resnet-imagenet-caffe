@@ -16,7 +16,7 @@ momentum: 0.9
 weight_decay: 0.0001
 stepsize: 200000
 snapshot: 50000
-snapshot_prefix: "/home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32"
+snapshot_prefix: "/home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32"
 solver_mode: GPU
 device_id: 0
 net: "resnet_32/resnet_32.prototxt"
@@ -50,7 +50,7 @@ layer {
     mean_value: 123
   }
   data_param {
-    source: "/home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_train_lmdb"
+    source: "/home/bmbelgod/imagenet/imagenet1K-LMDB/ilsvrc12_train_lmdb"
     batch_size: 32
     backend: LMDB
   }
@@ -1423,7 +1423,7 @@ I0111 18:29:31.178401 12987 layer_factory.hpp:77] Creating layer resnet_32
 I0111 18:29:31.179834 12987 net.cpp:100] Creating Layer resnet_32
 I0111 18:29:31.179862 12987 net.cpp:408] resnet_32 -> data
 I0111 18:29:31.179939 12987 net.cpp:408] resnet_32 -> label
-I0111 18:29:31.218631 12996 db_lmdb.cpp:35] Opened lmdb /home/heyihui/heyihui-local/caffe/examples/imagenet/ilsvrc12_train_lmdb
+I0111 18:29:31.218631 12996 db_lmdb.cpp:35] Opened lmdb /home/bmbelgod/imagenet/imagenet1K-LMDB/ilsvrc12_train_lmdb
 I0111 18:29:31.980911 12987 data_layer.cpp:41] output data size: 32,3,224,224
 I0111 18:29:32.033973 12987 net.cpp:150] Setting up resnet_32
 I0111 18:29:32.034021 12987 net.cpp:157] Top shape: 32 3 224 224 (4816896)
@@ -2973,8 +2973,8 @@ I0112 01:40:14.322978 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0112 01:40:14.323014 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.625
 I0112 01:40:14.323026 12987 solver.cpp:244]     Train net output #2: prob = 2.8593 (* 1 = 2.8593 loss)
 I0112 01:40:14.576745 12987 sgd_solver.cpp:106] Iteration 49000, lr = 0.1
-I0112 01:49:01.595684 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_50000.caffemodel
-I0112 01:49:03.072983 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_50000.solverstate
+I0112 01:49:01.595684 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_50000.caffemodel
+I0112 01:49:03.072983 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_50000.solverstate
 I0112 01:49:03.557168 12987 solver.cpp:228] Iteration 50000, loss = 2.50871
 I0112 01:49:03.557215 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.40625
 I0112 01:49:03.557224 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.6875
@@ -3225,8 +3225,8 @@ I0112 08:59:07.137156 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0112 08:59:07.137197 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.8125
 I0112 08:59:07.137214 12987 solver.cpp:244]     Train net output #2: prob = 2.10271 (* 1 = 2.10271 loss)
 I0112 08:59:07.387485 12987 sgd_solver.cpp:106] Iteration 99000, lr = 0.1
-I0112 09:07:53.528118 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_100000.caffemodel
-I0112 09:07:55.102588 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_100000.solverstate
+I0112 09:07:53.528118 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_100000.caffemodel
+I0112 09:07:55.102588 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_100000.solverstate
 I0112 09:07:55.524188 12987 solver.cpp:228] Iteration 100000, loss = 2.29968
 I0112 09:07:55.524235 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5
 I0112 09:07:55.524242 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.71875
@@ -3477,8 +3477,8 @@ I0112 16:17:53.860075 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0112 16:17:53.860116 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.71875
 I0112 16:17:53.860134 12987 solver.cpp:244]     Train net output #2: prob = 1.90046 (* 1 = 1.90046 loss)
 I0112 16:17:54.114064 12987 sgd_solver.cpp:106] Iteration 149000, lr = 0.1
-I0112 16:26:40.434564 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_150000.caffemodel
-I0112 16:26:42.009963 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_150000.solverstate
+I0112 16:26:40.434564 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_150000.caffemodel
+I0112 16:26:42.009963 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_150000.solverstate
 I0112 16:26:42.423980 12987 solver.cpp:228] Iteration 150000, loss = 2.24579
 I0112 16:26:42.424105 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.65625
 I0112 16:26:42.424129 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.84375
@@ -3730,8 +3730,8 @@ I0112 23:37:00.580171 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0112 23:37:00.580211 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.6875
 I0112 23:37:00.580238 12987 solver.cpp:244]     Train net output #2: prob = 2.52206 (* 1 = 2.52206 loss)
 I0112 23:37:00.830571 12987 sgd_solver.cpp:106] Iteration 199000, lr = 0.1
-I0112 23:45:47.151382 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_200000.caffemodel
-I0112 23:45:48.174933 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_200000.solverstate
+I0112 23:45:47.151382 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_200000.caffemodel
+I0112 23:45:48.174933 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_200000.solverstate
 I0112 23:45:48.609079 12987 solver.cpp:228] Iteration 200000, loss = 2.22318
 I0112 23:45:48.609122 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.40625
 I0112 23:45:48.609129 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.65625
@@ -3982,8 +3982,8 @@ I0113 06:55:45.283423 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0113 06:55:45.283447 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.90625
 I0113 06:55:45.283463 12987 solver.cpp:244]     Train net output #2: prob = 1.2407 (* 1 = 1.2407 loss)
 I0113 06:55:45.539278 12987 sgd_solver.cpp:106] Iteration 249000, lr = 0.01
-I0113 07:04:30.810657 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_250000.caffemodel
-I0113 07:04:33.112649 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_250000.solverstate
+I0113 07:04:30.810657 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_250000.caffemodel
+I0113 07:04:33.112649 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_250000.solverstate
 I0113 07:04:33.520584 12987 solver.cpp:228] Iteration 250000, loss = 1.19218
 I0113 07:04:33.520622 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.6875
 I0113 07:04:33.520628 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
@@ -4234,8 +4234,8 @@ I0113 14:14:19.826895 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0113 14:14:19.826906 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.71875
 I0113 14:14:19.826918 12987 solver.cpp:244]     Train net output #2: prob = 2.6968 (* 1 = 2.6968 loss)
 I0113 14:14:20.079358 12987 sgd_solver.cpp:106] Iteration 299000, lr = 0.01
-I0113 14:23:06.402837 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_300000.caffemodel
-I0113 14:23:08.439616 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_300000.solverstate
+I0113 14:23:06.402837 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_300000.caffemodel
+I0113 14:23:08.439616 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_300000.solverstate
 I0113 14:23:08.845746 12987 solver.cpp:228] Iteration 300000, loss = 1.20895
 I0113 14:23:08.845796 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.65625
 I0113 14:23:08.845803 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.875
@@ -4486,8 +4486,8 @@ I0113 21:33:07.479387 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0113 21:33:07.479398 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.78125
 I0113 21:33:07.479409 12987 solver.cpp:244]     Train net output #2: prob = 2.00498 (* 1 = 2.00498 loss)
 I0113 21:33:07.733928 12987 sgd_solver.cpp:106] Iteration 349000, lr = 0.01
-I0113 21:41:54.091446 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_350000.caffemodel
-I0113 21:41:56.485255 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_350000.solverstate
+I0113 21:41:54.091446 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_350000.caffemodel
+I0113 21:41:56.485255 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_350000.solverstate
 I0113 21:41:57.023263 12987 solver.cpp:228] Iteration 350000, loss = 1.17623
 I0113 21:41:57.023298 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.625
 I0113 21:41:57.023309 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.90625
@@ -4738,8 +4738,8 @@ I0114 04:52:54.666055 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0114 04:52:54.666066 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
 I0114 04:52:54.666079 12987 solver.cpp:244]     Train net output #2: prob = 0.931586 (* 1 = 0.931586 loss)
 I0114 04:52:54.917178 12987 sgd_solver.cpp:106] Iteration 399000, lr = 0.01
-I0114 05:01:40.510112 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_400000.caffemodel
-I0114 05:01:42.635093 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_400000.solverstate
+I0114 05:01:40.510112 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_400000.caffemodel
+I0114 05:01:42.635093 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_400000.solverstate
 I0114 05:01:43.043922 12987 solver.cpp:228] Iteration 400000, loss = 1.14885
 I0114 05:01:43.043998 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.5625
 I0114 05:01:43.044009 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.65625
@@ -4990,8 +4990,8 @@ I0114 12:12:59.425767 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0114 12:12:59.425797 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.9375
 I0114 12:12:59.425829 12987 solver.cpp:244]     Train net output #2: prob = 0.581704 (* 1 = 0.581704 loss)
 I0114 12:12:59.675134 12987 sgd_solver.cpp:106] Iteration 449000, lr = 0.001
-I0114 12:21:54.298655 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_450000.caffemodel
-I0114 12:21:58.245617 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_450000.solverstate
+I0114 12:21:54.298655 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_450000.caffemodel
+I0114 12:21:58.245617 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_450000.solverstate
 I0114 12:21:58.769225 12987 solver.cpp:228] Iteration 450000, loss = 0.664604
 I0114 12:21:58.769330 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.75
 I0114 12:21:58.769364 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
@@ -5246,8 +5246,8 @@ I0114 19:36:57.127562 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0114 19:36:57.127570 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
 I0114 19:36:57.127580 12987 solver.cpp:244]     Train net output #2: prob = 0.616567 (* 1 = 0.616567 loss)
 I0114 19:36:57.377696 12987 sgd_solver.cpp:106] Iteration 499000, lr = 0.001
-I0114 19:45:51.646553 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_500000.caffemodel
-I0114 19:45:59.535962 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_500000.solverstate
+I0114 19:45:51.646553 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_500000.caffemodel
+I0114 19:45:59.535962 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_500000.solverstate
 I0114 19:46:00.092412 12987 solver.cpp:228] Iteration 500000, loss = 0.630675
 I0114 19:46:00.092449 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.84375
 I0114 19:46:00.092458 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 1
@@ -5499,8 +5499,8 @@ I0115 03:02:12.794124 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0115 03:02:12.794136 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
 I0115 03:02:12.794152 12987 solver.cpp:244]     Train net output #2: prob = 0.552517 (* 1 = 0.552517 loss)
 I0115 03:02:13.045511 12987 sgd_solver.cpp:106] Iteration 549000, lr = 0.001
-I0115 03:11:06.301487 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_550000.caffemodel
-I0115 03:11:12.395777 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_550000.solverstate
+I0115 03:11:06.301487 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_550000.caffemodel
+I0115 03:11:12.395777 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_550000.solverstate
 I0115 03:11:12.921994 12987 solver.cpp:228] Iteration 550000, loss = 0.576431
 I0115 03:11:12.922034 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.84375
 I0115 03:11:12.922044 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 1
@@ -5751,8 +5751,8 @@ I0115 10:25:26.089457 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0115 10:25:26.089507 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.9375
 I0115 10:25:26.089537 12987 solver.cpp:244]     Train net output #2: prob = 0.745875 (* 1 = 0.745875 loss)
 I0115 10:25:26.332500 12987 sgd_solver.cpp:106] Iteration 599000, lr = 0.001
-I0115 10:34:11.674139 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_600000.caffemodel
-I0115 10:34:13.442016 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_600000.solverstate
+I0115 10:34:11.674139 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_600000.caffemodel
+I0115 10:34:13.442016 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_600000.solverstate
 I0115 10:34:13.856178 12987 solver.cpp:228] Iteration 600000, loss = 0.548823
 I0115 10:34:13.856236 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.8125
 I0115 10:34:13.856250 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 1
@@ -6003,8 +6003,8 @@ I0115 17:44:38.563318 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0115 17:44:38.563344 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
 I0115 17:44:38.563364 12987 solver.cpp:244]     Train net output #2: prob = 0.383381 (* 1 = 0.383381 loss)
 I0115 17:44:38.814419 12987 sgd_solver.cpp:106] Iteration 649000, lr = 0.0001
-I0115 17:53:24.873860 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_650000.caffemodel
-I0115 17:53:27.282294 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_650000.solverstate
+I0115 17:53:24.873860 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_650000.caffemodel
+I0115 17:53:27.282294 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_650000.solverstate
 I0115 17:53:27.702759 12987 solver.cpp:228] Iteration 650000, loss = 0.454908
 I0115 17:53:27.702790 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.96875
 I0115 17:53:27.702796 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
@@ -6255,8 +6255,8 @@ I0116 01:17:36.737821 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0116 01:17:36.737833 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 1
 I0116 01:17:36.737848 12987 solver.cpp:244]     Train net output #2: prob = 0.294365 (* 1 = 0.294365 loss)
 I0116 01:17:36.989609 12987 sgd_solver.cpp:106] Iteration 699000, lr = 0.0001
-I0116 01:26:53.085302 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_700000.caffemodel
-I0116 01:26:57.573696 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_700000.solverstate
+I0116 01:26:53.085302 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_700000.caffemodel
+I0116 01:26:57.573696 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_700000.solverstate
 I0116 01:26:58.095072 12987 solver.cpp:228] Iteration 700000, loss = 0.455263
 I0116 01:26:58.095206 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.84375
 I0116 01:26:58.095247 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
@@ -6507,8 +6507,8 @@ I0116 09:01:42.173391 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0116 09:01:42.173426 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 1
 I0116 09:01:42.173465 12987 solver.cpp:244]     Train net output #2: prob = 0.291792 (* 1 = 0.291792 loss)
 I0116 09:01:42.475335 12987 sgd_solver.cpp:106] Iteration 749000, lr = 0.0001
-I0116 09:10:45.460990 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_750000.caffemodel
-I0116 09:10:49.829478 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_750000.solverstate
+I0116 09:10:45.460990 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_750000.caffemodel
+I0116 09:10:49.829478 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_750000.solverstate
 I0116 09:10:50.266604 12987 solver.cpp:228] Iteration 750000, loss = 0.442246
 I0116 09:10:50.266651 12987 solver.cpp:244]     Train net output #0: accuracy@1 = 0.875
 I0116 09:10:50.266661 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 0.96875
@@ -6806,8 +6806,8 @@ I0116 16:35:09.430521 12987 solver.cpp:244]     Train net output #0: accuracy@1 
 I0116 16:35:09.430532 12987 solver.cpp:244]     Train net output #1: accuracy@5 = 1
 I0116 16:35:09.430549 12987 solver.cpp:244]     Train net output #2: prob = 0.412819 (* 1 = 0.412819 loss)
 I0116 16:35:09.685561 12987 sgd_solver.cpp:106] Iteration 799000, lr = 0.0001
-I0116 16:44:03.721850 12987 solver.cpp:454] Snapshotting to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_800000.caffemodel
-I0116 16:44:10.265877 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/heyihui/ceph/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_800000.solverstate
+I0116 16:44:03.721850 12987 solver.cpp:454] Snapshotting to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_800000.caffemodel
+I0116 16:44:10.265877 12987 sgd_solver.cpp:273] Snapshotting solver state to binary proto file /home/bmbelgod/resnet-imagenet-caffe/resnet_32/snapshot/resnet_32_iter_800000.solverstate
 I0116 16:44:10.646692 12987 solver.cpp:317] Iteration 800000, loss = 0.436055
 I0116 16:44:10.646746 12987 solver.cpp:322] Optimization Done.
 I0116 16:44:11.744096 12987 caffe.cpp:254] Optimization Done.
